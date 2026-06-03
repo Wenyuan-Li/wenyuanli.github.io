@@ -7,7 +7,29 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:"Times New Roman",Arial,serif;}
         body{max-width:1100px;margin:0 auto;padding:45px 35px;color:#222;line-height:1.62;background:#fdfdfd;}
-        header{text-align:center;border-bottom:3px solid #0f3460;padding-bottom:22px;margin-bottom:40px;background:#0f3460;color:#fff;padding:30px 20px;border-radius:8px;}
+        /* 头部flex布局：头像+个人信息 */
+        header{
+            display:flex;
+            align-items:center;
+            gap:30px;
+            flex-wrap:wrap;
+            justify-content:center;
+            border-bottom:3px solid #0f3460;
+            padding:30px 25px;
+            margin-bottom:40px;
+            background:#0f3460;
+            color:#fff;
+            border-radius:8px;
+        }
+        /* 圆形头像样式 */
+        .avatar{
+            width:130px;
+            height:130px;
+            border-radius:50%;
+            object-fit:cover;
+            border:4px solid #ffffff;
+        }
+        .header-text{flex:1;min-width:300px;text-align:center;}
         h1{font-size:32px;margin-bottom:10px;color:#ffffff;}
         .aff{font-size:17px;margin-bottom:13px;color:#e8edf5;}
         .contact-info{font-size:15px;color:#e8edf5}
@@ -24,11 +46,15 @@
 </head>
 <body>
 <header>
-    <h1>Wenyuan Li, ScD</h1>
-    <div class="aff">ZJU-100 Young Professor | Doctoral Supervisor<br>Institute of Digital and Intelligent Health, Zhejiang University</div>
-    <div class="contact-info">
-        Email: <a href="mailto:wenyuanli@outlook.com">wenyuanli@outlook.com</a> | Hangzhou, China<br>
-        ORCiD Homepage: <a href="https://orcid.org/0000-0001-6196-9964" target="_blank">https://orcid.org/0000-0001-6196-9964</a>
+    <!-- 头像位置：src="avatar.jpg"对应你上传的图片文件名 -->
+    <img src="avatar.jpg" alt="Wenyuan Li Photo" class="avatar">
+    <div class="header-text">
+        <h1>Wenyuan Li, ScD</h1>
+        <div class="aff">ZJU-100 Young Professor | Doctoral Supervisor<br>Institute of Digital and Intelligent Health, Zhejiang University</div>
+        <div class="contact-info">
+            Email: <a href="mailto:wenyuanli@outlook.com">wenyuanli@outlook.com</a> | Hangzhou, China<br>
+            ORCiD Homepage: <a href="https://orcid.org/0000-0001-6196-9964" target="_blank">https://orcid.org/0000-0001-6196-9964</a>
+        </div>
     </div>
 </header>
 
@@ -134,7 +160,7 @@
     <h2>GRANTS AND FUNDING</h2>
     <ul>
         <li>National Natural Science Foundation of China (NSFC) Young Scientist Fund, 2023–2025, PI: Discovering environmental factor effects on biological age based on ensemble learning</li>
-        <li>Zhejiang Provincial Science and Technology Talent Program for Young Scientists(SW), 2026, Awardee</li>
+        <li>Zhejiang Provincial Science and Technology Talent Program for Young Scientists, 2026, Awardee</li>
         <li>Zhejiang Medical Security Research Association, Long-term Care Insurance Payment Study, PI</li>
     </ul>
 </section>
